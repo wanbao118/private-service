@@ -2,4 +2,5 @@
 <mule-project xmlns="http://www.mulesoft.com/tooling/project" runtimeId="org.mule.tooling.apigateway.2.2.1" schemaVersion="5.3.0.0">
     <name>private-service</name>
     <description></description>
+    <muleExtension name="APIkit" qualifier="org.mule.tooling.apikit.3.7.0"/>
 </mule-project>
