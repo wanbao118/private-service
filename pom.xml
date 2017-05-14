@@ -251,6 +251,6 @@
     	<groupId>edu.xust.mule</groupId>
     	<artifactId>private-service-parent</artifactId>
     	<version>1.0.0</version>
-    	<relativePath>../private-service-parent/pom.xml</relativePath>
+    	<relativePath>${relativePath}</relativePath>
     </parent>
 </project>
