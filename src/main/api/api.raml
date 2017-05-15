@@ -1,2 +1,17 @@
 #%RAML 0.8
-title: Sample API
+title: Private Service API
+baseUri: http://localhost:8082
+version: 1.0
+
+/geo:
+  displayName: geo ip address service
+  get:
+    queryParameters:
+      ip:
+        example: ip
+        default: ip
+    responses:
+      200:
+        body:
+          application/json:
+            
