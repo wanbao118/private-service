@@ -16,6 +16,7 @@ http://www.springframework.org/schema/beans http://www.springframework.org/schem
     <context:property-placeholder location="api.properties"   ignore-resource-not-found="true"/>
     <flow name="api-main">
         <http:listener config-ref="http-lc-0.0.0.0-8081" path="/api/*" doc:name="HTTP"/>
+        <logger message="#[message]" level="INFO" doc:name="Logger"/>
         <apikit:router config-ref="apiConfig" doc:name="APIkit Router"/>
         <exception-strategy ref="apiKitGlobalExceptionMapping" doc:name="Reference Exception Strategy"/>
     </flow>

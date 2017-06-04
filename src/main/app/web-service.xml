@@ -10,6 +10,7 @@ http://www.mulesoft.org/schema/mule/json http://www.mulesoft.org/schema/mule/jso
 http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/mule/ee/tracking/current/mule-tracking-ee.xsd">
     <ws:consumer-config name="Web_Service_Consumer" service="GeoIPService" port="GeoIPServiceSoap12" serviceAddress="http://www.webservicex.net/geoipservice.asmx" wsdlLocation="http://www.webservicex.net/geoipservice.asmx?WSDL" doc:name="Web Service Consumer"/>
     <flow name="geo-ip-web-service">
+        <logger message="#[message]" level="INFO" doc:name="Logger"/>
         <ws:consumer config-ref="Web_Service_Consumer" operation="GetGeoIPContext" doc:name="Web Service Consumer"/>
         <json:xml-to-json-transformer doc:name="XML to JSON"/>
     </flow>
